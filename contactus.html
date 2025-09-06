@@ -72,8 +72,9 @@
 
         .nav-links {
             display: flex;
+            align-items: center; /* ✅ Added for proper vertical alignment */
             list-style: none;
-            gap: 2rem;
+            gap: 1.5rem; /* ✅ Consistent spacing between links */
         }
 
         .nav-links a {
@@ -83,6 +84,8 @@
             padding: 0.5rem 1rem;
             border-radius: 0.375rem;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center; /* ✅ Keeps link text centered */
         }
 
         .nav-links a:hover {
@@ -328,6 +331,7 @@
                 right: 0;
                 background-color: var(--bg-color);
                 flex-direction: column;
+                align-items: center; /* ✅ Center links in mobile menu */
                 padding: 1rem;
                 box-shadow: var(--shadow);
             }
@@ -348,18 +352,20 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+</style>
+
 </head>
 <body>
     <!-- Header & Navigation -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">EduManage</a>
+            <a href="#" class="logo">Student Academic and Fee Management</a>
             
             <button class="mobile-menu-btn">☰</button>
             
             <ul class="nav-links">
                 <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="StudentMng.html">Student Management</a></li>
                 <li><a href="contactus.html" style="background-color: var(--primary-color); color: white;">Contact Us</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="login.html">Login / Sign Up</a></li>
@@ -408,7 +414,7 @@
                         <div class="info-icon">✉️</div>
                         <div>
                             <strong>Email</strong>
-                            <p>info@edumanage.com<br>support@edumanage.com</p>
+                            <p>info@Student Academic and Fee Management.com<br>support@Student Academic and Fee Management.com</p>
                         </div>
                     </div>
                     
@@ -514,24 +520,26 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>EduManage</h3>
+                    <h3>Student Academic and Fee Management</h3>
                     <p>Comprehensive Student Academic & Fee Management Solutions for Modern Educational Institutions</p>
                 </div>
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <p><a href="dashboard.html" style="color: var(--text-color);">Dashboard</a></p>
+                    <p><a href="StudentMng.html" style="color: var(--text-color);">Studemt Management</a></p>
                     <p><a href="contactus.html" style="color: var(--text-color);">Contact Us</a></p>
                     <p><a href="aboutus.html" style="color: var(--text-color);">About Us</a></p>
+                    <p><a href="login.html" style="color: var(--text-color);">Login / Sign Up</a></p>
                 </div>
                 <div class="footer-section">
                     <h3>Contact Info</h3>
-                    <p>Email: info@edumanage.com</p>
+                    <p>Email: info@Student Academic and Fee Management.com</p>
                     <p>Phone: +1 (555) 123-4567</p>
                     <p>Address: 123 Education Ave, Tech City</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2024 EduManage. All rights reserved.</p>
+                <p>© 2024 Student Academic and Fee Management. All rights reserved.</p>
             </div>
         </div>
     </footer>
