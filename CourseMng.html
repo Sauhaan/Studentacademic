@@ -388,6 +388,122 @@
             color: var(--primary);
         }
         
+        /* Contact Page Styles */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 2rem;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-details i {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-details p {
+            opacity: 0.8;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-form h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .map-container {
+            margin-top: 3rem;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            height: 300px;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .faq-section {
+            margin-top: 3rem;
+        }
+        
+        .faq-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+        
+        .faq-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .faq-item h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
         /* Footer */
         footer {
             background: var(--dark);
@@ -442,6 +558,10 @@
             .footer-content {
                 grid-template-columns: repeat(2, 1fr);
             }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 768px) {
@@ -490,9 +610,10 @@
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="#" onclick="showPage('catalog')">Catalog</a></li>
-                        <li><a href="#" onclick="showPage('enrollment')">My Courses</a></li>
-                        <li><a href="#" onclick="showPage('prerequisites')">Prerequisites</a></li>
+                        <li><a href="Dashboard.html"> Dashboard</a></li>
+                        <li><a href="Feesetup.html"> Fee Setup</a></li>
+                        <li><a href="contactus.html"> Contact Us</a></li>
+                        <li><a href="Login.html"> Login</a></li>
                     </ul>
                 </nav>
                 <div class="auth-buttons">
@@ -771,6 +892,96 @@
                 </li>
             </ul>
         </section>
+
+        <!-- Contact Us Page -->
+        <section id="contact" class="page-section">
+            <h2>Contact Us</h2>
+            <p>We're here to help with any questions about our Student Academic and Fee Management System. Reach out to us through any of the following channels.</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3><i class="fas fa-info-circle"></i> Get in Touch</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Education Street, Academic City, AC 12345</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                                <p>+1 (555) 987-6543</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>support@edutrack.com</p>
+                                <p>info@edutrack.com</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contact-form">
+                    <h3><i class="fas fa-paper-plane"></i> Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" class="form-control" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text" id="contact-subject" class="form-control" placeholder="Enter subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-control" placeholder="Type your message here..." rows="5" required></textarea>
+                        </div>
+                        <button type="button" class="btn btn-primary" style="width: 100%;"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.6214657587097!2d-74.00594934894813!3d40.712992679225254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a23c7ad6d0b%3A0x6b9270d3df037c58!2sEducation%20St%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1654567890123!5m2!1sen!2s" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="faq-section">
+                <h3 class="faq-title">Frequently Asked Questions</h3>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <h4><i class="fas fa-question-circle"></i> How do I reset my password?</h4>
+                        <p>You can reset your password by clicking on the "Forgot Password" link on the login page. Follow the instructions sent to your registered email.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-question-circle"></i> How can I view my fee statement?</h4>
+                        <p>After logging in, navigate to the "Fee Management" section where you can view and download your fee statement.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4><i class="fas fa-question-circle"></i> Who should I contact for technical issues?</h4>
+                        <p>For technical support, please email our support team at support@edutrack.com or call us at +1 (555) 123-4567.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- Footer -->
@@ -785,10 +996,10 @@
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="Dashboard.html"> Dashboard</a></li>
+                        <li><a href="Feesetup.html"> Fee Setup</a></li>
+                        <li><a href="contactus.html"> Contact Us</a></li>
+                        <li><a href="Login.html"> Login</a></li>
                     </ul>
                 </div>
                 
@@ -814,7 +1025,7 @@
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Student Academic and Fee Management. All rights reserved.</p>
+                <p>&copy; 2023 Edutrack. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -834,11 +1045,3 @@
             // Scroll to top
             window.scrollTo(0, 0);
         }
-        
-        // Initialize the page with login form visible
-        document.addEventListener('DOMContentLoaded', function() {
-            showPage('catalog');
-        });
-    </script>
-</body>
-</html>
